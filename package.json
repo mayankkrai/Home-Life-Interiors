@@ -3,10 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-   "scripts": {
+  "scripts": {
     "dev": "vite",
-    "prebuild": "chmod +x node_modules/.bin/vite",
-    "build": "vite build",
+    "build": "node scripts/build.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
