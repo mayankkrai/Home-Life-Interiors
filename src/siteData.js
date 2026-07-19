@@ -136,6 +136,24 @@ export const pageMetadata = {
     description:
       "Explore residential interior design and turnkey solutions from Home Life Interiors, serving Noida, Greater Noida, Ghaziabad, Indirapuram and Delhi NCR.",
   },
+  "/full-home-interiors": {
+    path: "/full-home-interiors/",
+    title: "Full Home Interior Design in Noida NCR | Home Life Interiors",
+    description:
+      "Plan complete apartment or villa interiors with design, budgeting, material selection and turnkey execution across Noida, Greater Noida and Ghaziabad.",
+  },
+  "/modular-kitchens": {
+    path: "/modular-kitchens/",
+    title: "Modular Kitchen Design in Noida NCR | Home Life Interiors",
+    description:
+      "Plan a practical modular kitchen around your layout, storage needs and finishes with coordinated design and execution across Noida NCR.",
+  },
+  "/room-interiors": {
+    path: "/room-interiors/",
+    title: "Living Room & Bedroom Interiors in Noida NCR | Home Life Interiors",
+    description:
+      "Plan living room and bedroom interiors with coordinated layouts, storage, lighting, finishes and execution across Noida NCR.",
+  },
   "/projects": {
     path: "/projects/",
     title: "Interior Design Projects in Noida NCR | Home Life Interiors",

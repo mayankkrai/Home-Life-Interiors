@@ -35,7 +35,37 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="service-process-title">
+      <section className="section" aria-labelledby="focused-services-title">
+        <div className="container">
+          <div className="content-heading">
+            <h2 id="focused-services-title" className="section-title">
+              Explore a focused interior service
+            </h2>
+            <p className="section-note">
+              Choose the project type that best matches the space you want to plan.
+            </p>
+          </div>
+          <div className="detail-grid service-link-grid">
+            <a className="detail-card service-link-card" href="/full-home-interiors/">
+              <p className="detail-number">01</p>
+              <h3>Full Home Interiors</h3>
+              <p>Complete apartment and villa design with coordinated turnkey execution.</p>
+            </a>
+            <a className="detail-card service-link-card" href="/modular-kitchens/">
+              <p className="detail-number">02</p>
+              <h3>Modular Kitchens</h3>
+              <p>Kitchen layouts, storage, finishes, and coordinated installation.</p>
+            </a>
+            <a className="detail-card service-link-card" href="/room-interiors/">
+              <p className="detail-number">03</p>
+              <h3>Room Interiors</h3>
+              <p>Focused living room and bedroom design for practical everyday use.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt" aria-labelledby="service-process-title">
         <div className="container">
           <div className="process-head">
             <p className="eyebrow">How It Works</p>

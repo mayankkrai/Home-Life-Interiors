@@ -959,6 +959,37 @@ h3 {
   text-align: center;
 }
 
+.landing-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.landing-overview-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--line-soft);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.landing-service-area {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.service-link-card {
+  display: block;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.service-link-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 109, 0.45);
+}
+
 @media (max-width: 1100px) {
   .services-style-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1051,7 +1082,8 @@ h3 {
   .hero-grid,
   .about-grid,
   .contact-grid,
-  .about-page-grid {
+  .about-page-grid,
+  .landing-overview-grid {
     grid-template-columns: 1fr;
   }
 }

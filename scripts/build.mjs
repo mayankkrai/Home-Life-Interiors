@@ -1,6 +1,7 @@
 import { readFile, mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import react from "@vitejs/plugin-react";
 import { build } from "vite";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -103,6 +104,8 @@ ${urls}
 try {
   await build({
     root: projectRoot,
+    configFile: false,
+    plugins: [react()],
     build: {
       outDir: distDir,
       emptyOutDir: true,
@@ -111,6 +114,8 @@ try {
 
   await build({
     root: projectRoot,
+    configFile: false,
+    plugins: [react()],
     build: {
       ssr: path.join(projectRoot, "src", "entry-server.jsx"),
       outDir: serverOutDir,
