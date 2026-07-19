@@ -7,6 +7,19 @@ const initialFormData = {
   message: "",
 };
 
+const consultationConversionDestination =
+  "AW-18148588604/XR9lCInI9tIcELz49c1D";
+
+const reportConsultationConversion = () => {
+  if (typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "conversion", {
+    send_to: consultationConversionDestination,
+  });
+};
+
 export default function ConsultationForm() {
   const [formData, setFormData] = useState(initialFormData);
 
@@ -31,6 +44,7 @@ Requirement: ${formData.message}
       whatsappMessage,
     )}`;
 
+    reportConsultationConversion();
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setFormData(initialFormData);
   };
