@@ -87,9 +87,47 @@ const landingPages = {
     ctaCopy:
       "Book a free initial consultation for a living room, bedroom, or focused residential interior project in Noida NCR.",
   },
+  wallpaper: {
+    eyebrow: "Wallpaper Supply & Installation",
+    title: "Wallpaper for Homes in Noida NCR",
+    intro:
+      "Explore wallpaper for bedrooms, living rooms, and feature walls, supplied to retail customers with optional home measurement and installation across Noida NCR.",
+    image: "/assets/interiors/project-living-room.jpg",
+    imageAlt: "Living room feature wall by Home Life Interiors in Noida NCR",
+    sectionTitle: "Choose wallpaper with practical support",
+    sectionCopy:
+      "Select patterns, colours, and finishes around your room, wall condition, and budget, then choose supply-only service or home installation.",
+    benefits: [
+      {
+        title: "Retail wallpaper supply",
+        copy: "Explore wallpaper options for bedrooms, living rooms, feature walls, and other residential spaces.",
+      },
+      {
+        title: "Measurement and selection",
+        copy: "Request a home visit when needed to review the wall, confirm measurements, and discuss suitable options.",
+      },
+      {
+        title: "Optional home installation",
+        copy: "Arrange wallpaper installation at your home when required, with final scope confirmed before work begins.",
+      },
+    ],
+    processSteps: [
+      "Consultation",
+      "Site Measurement",
+      "Wallpaper Selection",
+      "Quote",
+      "Supply or Installation",
+      "Final Check",
+    ],
+    ctaTitle: "Enquire about wallpaper for your home",
+    ctaCopy:
+      "Tell us your room, approximate wall size, location, and whether you need wallpaper supply only or home installation.",
+  },
 };
 
 function ServiceLandingPage({ page }) {
+  const serviceProcessSteps = page.processSteps || processSteps;
+
   return (
     <PageShell eyebrow={page.eyebrow} title={page.title} intro={page.intro}>
       <section className="section section-alt" aria-labelledby="landing-overview-title">
@@ -141,7 +179,7 @@ function ServiceLandingPage({ page }) {
             </h2>
           </div>
           <ol className="process-grid process-list">
-            {processSteps.map((step, index) => (
+            {serviceProcessSteps.map((step, index) => (
               <li key={step} className="process-card">
                 <p className="step-number">0{index + 1}</p>
                 <p>{step}</p>
@@ -166,4 +204,8 @@ export function ModularKitchensPage() {
 
 export function RoomInteriorsPage() {
   return <ServiceLandingPage page={landingPages.roomInteriors} />;
+}
+
+export function WallpaperInstallationPage() {
+  return <ServiceLandingPage page={landingPages.wallpaper} />;
 }

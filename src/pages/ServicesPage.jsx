@@ -61,6 +61,11 @@ export default function ServicesPage() {
               <h3>Room Interiors</h3>
               <p>Focused living room and bedroom design for practical everyday use.</p>
             </a>
+            <a className="detail-card service-link-card" href="/wallpaper-installation/">
+              <p className="detail-number">04</p>
+              <h3>Wallpaper Supply &amp; Installation</h3>
+              <p>Retail wallpaper for residential walls with optional home installation.</p>
+            </a>
           </div>
         </div>
       </section>

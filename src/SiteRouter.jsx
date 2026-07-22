@@ -8,6 +8,7 @@ import {
   FullHomeInteriorsPage,
   ModularKitchensPage,
   RoomInteriorsPage,
+  WallpaperInstallationPage,
 } from "./pages/ServiceLandingPages";
 import { normalizePath } from "./siteData";
 
@@ -20,6 +21,7 @@ const routeComponents = {
   "/projects": ProjectsPage,
   "/room-interiors": RoomInteriorsPage,
   "/services": ServicesPage,
+  "/wallpaper-installation": WallpaperInstallationPage,
 };
 
 export default function SiteRouter({ path = "/" }) {

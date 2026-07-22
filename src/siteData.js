@@ -41,10 +41,10 @@ export const services = [
       "Work with a dedicated design point of contact from early planning through execution.",
   },
   {
-    title: "Wall designs and painting",
+    title: "Wall design, wallpaper and painting",
     icon: "05",
     description:
-      "Coordinate wall finishes, colour choices, and painting with the rest of the interior scheme.",
+      "Choose coordinated wall finishes, retail wallpaper, optional home installation, colour choices, and painting.",
   },
   {
     title: "Terrace gardening",
@@ -153,6 +153,12 @@ export const pageMetadata = {
     title: "Living Room & Bedroom Interiors in Noida NCR | Home Life Interiors",
     description:
       "Plan living room and bedroom interiors with coordinated layouts, storage, lighting, finishes and execution across Noida NCR.",
+  },
+  "/wallpaper-installation": {
+    path: "/wallpaper-installation/",
+    title: "Wallpaper Supply & Installation in Noida NCR | Home Life Interiors",
+    description:
+      "Explore wallpaper for bedrooms, living rooms and feature walls, with retail supply and optional home installation across Noida, Greater Noida and Ghaziabad.",
   },
   "/projects": {
     path: "/projects/",
