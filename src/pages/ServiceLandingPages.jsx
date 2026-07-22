@@ -111,6 +111,26 @@ const landingPages = {
         copy: "Arrange wallpaper installation at your home when required, with final scope confirmed before work begins.",
       },
     ],
+    gallery: [
+      {
+        title: "Hanging tropical leaves",
+        copy: "A soft lilac botanical mural for a calm living-room feature wall.",
+        image: "/assets/wallpaper/hanging-tropical-leaves-lilac.webp",
+        imageAlt: "Lilac hanging tropical leaves wallpaper in a contemporary living room",
+      },
+      {
+        title: "Tropical vintage nature",
+        copy: "A muted scenic mural with foliage and birds for a statement wall.",
+        image: "/assets/wallpaper/tropical-vintage-nature.webp",
+        imageAlt: "Vintage tropical nature wallpaper with flamingos and a crane behind a sofa",
+      },
+      {
+        title: "Vintage tropical foliage",
+        copy: "Warm layered foliage designed to bring depth to a residential lounge.",
+        image: "/assets/wallpaper/vintage-tropical-foliage.webp",
+        imageAlt: "Vintage tropical foliage wallpaper on a living-room feature wall",
+      },
+    ],
     processSteps: [
       "Consultation",
       "Site Measurement",
@@ -146,7 +166,36 @@ function ServiceLandingPage({ page }) {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="landing-benefits-title">
+      {page.gallery && (
+        <section className="section" aria-labelledby="wallpaper-gallery-title">
+          <div className="container">
+            <div className="content-heading wallpaper-gallery-heading">
+              <div>
+                <p className="eyebrow">Wallpaper Inspiration</p>
+                <h2 id="wallpaper-gallery-title" className="section-title">
+                  Explore feature-wall styles
+                </h2>
+              </div>
+              <p className="section-note">
+                Share the style you like and your approximate wall size to discuss availability, supply, and optional installation.
+              </p>
+            </div>
+            <div className="wallpaper-gallery-grid">
+              {page.gallery.map((item) => (
+                <article key={item.title} className="wallpaper-gallery-card">
+                  <img src={item.image} alt={item.imageAlt} loading="lazy" />
+                  <div className="wallpaper-gallery-copy">
+                    <h3>{item.title}</h3>
+                    <p>{item.copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className={`section${page.gallery ? " section-alt" : ""}`} aria-labelledby="landing-benefits-title">
         <div className="container">
           <div className="content-heading">
             <h2 id="landing-benefits-title" className="section-title">
@@ -170,7 +219,7 @@ function ServiceLandingPage({ page }) {
         </div>
       </section>
 
-      <section className="section section-alt" aria-labelledby="landing-process-title">
+      <section className={`section${page.gallery ? "" : " section-alt"}`} aria-labelledby="landing-process-title">
         <div className="container">
           <div className="process-head">
             <p className="eyebrow">How It Works</p>
